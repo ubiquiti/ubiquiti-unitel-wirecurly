@@ -1,0 +1,14 @@
+Source: wirecurly
+Maintainer: Joao Mesquita <jmesquita@indicium.com.ar>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), debhelper (>= 7), python-support (>= 0.8.4)
+Standards-Version: 3.8.4
+
+Package: python-wirecurly
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python3-lxml | python-lxml
+XB-Python-Version: ${python:Versions}
+Provides: ${python:Provides}
+Description: A simple XML generation tool to handle FreeSWITCH mod_xml_cu
+
