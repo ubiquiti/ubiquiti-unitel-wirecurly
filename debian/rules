@@ -19,4 +19,10 @@ export DH_OPTIONS=--buildsystem=python_distutils
 %:
 	dh $@
 
+override_dh_gencontrol:
+	if [ -n "$$UBNT_DEV_PKG_VERSION" ]; then \
+		dh_gencontrol -- "-v$$UBNT_DEV_PKG_VERSION"; \
+	 else \
+		dh_gencontrol; \
+	fi
 
